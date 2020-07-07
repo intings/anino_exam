@@ -51,7 +51,7 @@ public class Reel : MonoBehaviour
     
     private IEnumerator Spin(int targetResult)
     {
-        Debug.Log(symbols[targetResult].name);
+        Debug.Log("Reel " + reelNumber + " should stop at " +  symbols[targetResult].name);
         for (var i = 0; i < _rinseRepeat; i++)
         {
             var targetDistance = targetResult - (((int) (transform.position.y / GRID_SIZE)) + 1);

@@ -31,6 +31,7 @@ public class ReelController : MonoBehaviour
     private void Spin()
     {
         if (!_canSpin || _betAmount == 0) return;
+        SoundController.Instance.PlaySoundByIndex(5);
         _canSpin = false;
         _coins -= _betAmount;
         coinsText.text = "COINS : " + _coins;
@@ -57,6 +58,7 @@ public class ReelController : MonoBehaviour
     private void Stop()
     {
         if (!_canStop) return;
+        SoundController.Instance.PlaySoundByIndex(6);
         _canStop = false;
         spinButton.enabled = false;
         foreach (var reel in reels)
@@ -117,6 +119,7 @@ public class ReelController : MonoBehaviour
             if (lastDisplayedLine != null)
                 Destroy(lastDisplayedLine);
             lastDisplayedLine = Instantiate(win.PayLine.spriteRenderer.gameObject);
+            SoundController.Instance.PlaySoundByIndex(7);
             var linePayout = symbolsData[win.Value - 1].PayOut[win.Count - 1];
             linePayout *= (_betAmount / 10);
             winAmount += linePayout;
@@ -124,6 +127,7 @@ public class ReelController : MonoBehaviour
         }
         if (lastDisplayedLine != null)
             Destroy(lastDisplayedLine);
+        SoundController.Instance.PlaySoundByIndex(4);
         _coins += winAmount;
         winningsText.text = "WINNINGS : " + winAmount;
         coinsText.text = "COINS : " + _coins;
@@ -138,8 +142,11 @@ public class ReelController : MonoBehaviour
 
     public void AddBet(int amount)
     {
+        var soundIndex = amount > 0 ? 1 : 0;
         _betAmount += amount;
-        CheckIfBetAllowed();
+        soundIndex = CheckIfBetAllowed() ? soundIndex : 3;
+        SoundController.Instance.PlaySoundByIndex(soundIndex);
+
     }
 
     private bool CheckIfBetAllowed()

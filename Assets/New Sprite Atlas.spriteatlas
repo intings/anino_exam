@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 0b10b0a9484c8e04b87e417e3aa51a93, type: 3}
+    - {fileID: 2800000, guid: 5eb17242e547dd1489df2f51da049cc7, type: 3}
+    - {fileID: 2800000, guid: c41d3be31bb729e4c82cd4ceb220e5c9, type: 3}
+    - {fileID: 2800000, guid: 3c391644dce667a4e8fc109e5967133d, type: 3}
+    - {fileID: 2800000, guid: 5c3b6b2f439e554468df6e318f935459, type: 3}
+    - {fileID: 2800000, guid: dcc008a819a44434585ca706e17c9bde, type: 3}
+    - {fileID: 2800000, guid: 8125170c960fc994f949fa0317a597e8, type: 3}
+    - {fileID: 2800000, guid: fe1e0ea1bef708149aeff7df9f81f3b9, type: 3}
+    - {fileID: 2800000, guid: 3629d71626b97a849b75fa6f583f10c5, type: 3}
+    - {fileID: 2800000, guid: 9437459bcaa0e2e43820efe2aad02147, type: 3}
+    - {fileID: 2800000, guid: b8a379625aa830e4592c7932afca7334, type: 3}
+    - {fileID: 2800000, guid: 713378fc907ff7041a5e3e2b72b51dfe, type: 3}
+    - {fileID: 2800000, guid: 194357d6c477eb64bbb2a8d18018cdda, type: 3}
+    - {fileID: 2800000, guid: 0a7151eb0ac5b9f46845c967657495b8, type: 3}
+    - {fileID: 2800000, guid: 218e710dfdc13d14c8f27805682c1df9, type: 3}
+    - {fileID: 2800000, guid: f03becc3df6a9a24ab418bb56b45ae29, type: 3}
+    - {fileID: 2800000, guid: 3d992524bb8f0494a9a5bdbf053fd91e, type: 3}
+    totalSpriteSurfaceArea: 2408479
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: fe1e0ea1bef708149aeff7df9f81f3b9, type: 3}
+  - {fileID: 21300000, guid: 5eb17242e547dd1489df2f51da049cc7, type: 3}
+  - {fileID: 21300000, guid: b8a379625aa830e4592c7932afca7334, type: 3}
+  - {fileID: 21300000, guid: f03becc3df6a9a24ab418bb56b45ae29, type: 3}
+  - {fileID: 21300000, guid: c41d3be31bb729e4c82cd4ceb220e5c9, type: 3}
+  - {fileID: 21300000, guid: 3d992524bb8f0494a9a5bdbf053fd91e, type: 3}
+  - {fileID: 21300000, guid: 3c391644dce667a4e8fc109e5967133d, type: 3}
+  - {fileID: 21300000, guid: 3629d71626b97a849b75fa6f583f10c5, type: 3}
+  - {fileID: 21300000, guid: 194357d6c477eb64bbb2a8d18018cdda, type: 3}
+  - {fileID: 21300000, guid: dcc008a819a44434585ca706e17c9bde, type: 3}
+  - {fileID: 21300000, guid: 0b10b0a9484c8e04b87e417e3aa51a93, type: 3}
+  - {fileID: 21300000, guid: 9437459bcaa0e2e43820efe2aad02147, type: 3}
+  - {fileID: 21300000, guid: 0a7151eb0ac5b9f46845c967657495b8, type: 3}
+  - {fileID: 21300000, guid: 8125170c960fc994f949fa0317a597e8, type: 3}
+  - {fileID: 21300000, guid: 713378fc907ff7041a5e3e2b72b51dfe, type: 3}
+  - {fileID: 21300000, guid: 218e710dfdc13d14c8f27805682c1df9, type: 3}
+  - {fileID: 21300000, guid: 5c3b6b2f439e554468df6e318f935459, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - back
+  - bigBatya
+  - icon_2
+  - icon_7
+  - m
+  - icon_8
+  - smol
+  - screen
+  - icon_4
+  - tri
+  - batya
+  - icon_1
+  - icon_5
+  - zig
+  - icon_3
+  - icon_6
+  - straight
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0
