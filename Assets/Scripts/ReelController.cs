@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using ScriptableObjects;
 using TMPro;
@@ -24,7 +25,7 @@ public class ReelController : MonoBehaviour
 
     private void Awake()
     {
-        PayLinesData.Instance.payLines = payLines;
+        //    PayLinesData.Instance.payLines = payLines;
     }
 
     private void Spin()
@@ -103,29 +104,36 @@ public class ReelController : MonoBehaviour
                 _wins.Add(new Win(payLine, item.Value, item.Count));
             }
         }
-        DisplayWinnings();
+        StartCoroutine(DisplayWinnings());
+    }
+
+    private IEnumerator DisplayWinnings()
+    {
+        var symbolsData = SymbolsDataHolder.Instance.symbolsData;
+        var winAmount = 0;
+        GameObject lastDisplayedLine = null;
+        foreach (var win in _wins)
+        {
+            if (lastDisplayedLine != null)
+                Destroy(lastDisplayedLine);
+            lastDisplayedLine = Instantiate(win.PayLine.spriteRenderer.gameObject);
+            var linePayout = symbolsData[win.Value - 1].PayOut[win.Count - 1];
+            linePayout *= (_betAmount / 10);
+            winAmount += linePayout;
+            yield return new WaitForSeconds(1);
+        }
+        if (lastDisplayedLine != null)
+            Destroy(lastDisplayedLine);
+        _coins += winAmount;
+        winningsText.text = "WINNINGS : " + winAmount;
+        coinsText.text = "COINS : " + _coins;
         CheckIfBetAllowed();
         _canSpin = true;
         spinButton.enabled = true;
         spinButton.onClick.RemoveListener(Stop);
         spinButton.onClick.AddListener(Spin);
         spinButtonText.text = "SPIN";
-    }
-
-    private void DisplayWinnings()
-    {
-        var symbolsData = SymbolsDataHolder.Instance.symbolsData;
-        var winAmount = 0;
-        foreach (var win in _wins)
-        {
-            var linePayout = symbolsData[win.Value - 1].PayOut[win.Count - 1];
-            linePayout *= (_betAmount / 10);
-            winAmount += linePayout;
-        }
-
-        _coins += winAmount;
-        winningsText.text = "WINNINGS : " + winAmount;
-        coinsText.text = "COINS : " + _coins;
+        StopAllCoroutines();
     }
 
     public void AddBet(int amount)

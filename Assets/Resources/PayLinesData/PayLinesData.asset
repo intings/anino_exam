@@ -12,3 +12,144 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7de42b6bb07cd45bce7104729eac91, type: 3}
   m_Name: PayLinesData
   m_EditorClassIdentifier: 
+  payLines:
+  - col1: 0
+    col2: 0
+    col3: 0
+    col4: 0
+    col5: 0
+    spriteRenderer: {fileID: 8821375215763518621, guid: 184d601645c10db4482e0b3d3d81f6c5,
+      type: 3}
+  - col1: 1
+    col2: 1
+    col3: 1
+    col4: 1
+    col5: 1
+    spriteRenderer: {fileID: 5537702770654906209, guid: 1b00ccb40e4eceb49920dd427a517612,
+      type: 3}
+  - col1: 2
+    col2: 2
+    col3: 2
+    col4: 2
+    col5: 2
+    spriteRenderer: {fileID: 3091298358005821788, guid: f933a0a042e07bf4c92c1bd58235932a,
+      type: 3}
+  - col1: 0
+    col2: 1
+    col3: 2
+    col4: 1
+    col5: 0
+    spriteRenderer: {fileID: 5852264346201833851, guid: 9143e53977736b943ae3acd8746e1bdd,
+      type: 3}
+  - col1: 2
+    col2: 1
+    col3: 0
+    col4: 1
+    col5: 2
+    spriteRenderer: {fileID: 2882832041971004529, guid: 252107d240fc4844ca3e5bb6dd8f3aa1,
+      type: 3}
+  - col1: 0
+    col2: 1
+    col3: 0
+    col4: 1
+    col5: 0
+    spriteRenderer: {fileID: 2571998533143782669, guid: 916d57874ef45a944b406c505b7f008e,
+      type: 3}
+  - col1: 1
+    col2: 0
+    col3: 1
+    col4: 0
+    col5: 1
+    spriteRenderer: {fileID: 1715251004501141147, guid: 3880b5f3067599441a0cfd35467b2800,
+      type: 3}
+  - col1: 2
+    col2: 1
+    col3: 2
+    col4: 1
+    col5: 2
+    spriteRenderer: {fileID: 581746107340025983, guid: 6a3fe18ae1fb7154aba9286c16a5fbe8,
+      type: 3}
+  - col1: 1
+    col2: 2
+    col3: 1
+    col4: 2
+    col5: 1
+    spriteRenderer: {fileID: 1786998318850465414, guid: 1d729cce3710a0747949ded0f8023531,
+      type: 3}
+  - col1: 0
+    col2: 1
+    col3: 1
+    col4: 1
+    col5: 0
+    spriteRenderer: {fileID: 249489924525674553, guid: da3724c8d541cfa419f8fb712430edbe,
+      type: 3}
+  - col1: 1
+    col2: 0
+    col3: 0
+    col4: 0
+    col5: 1
+    spriteRenderer: {fileID: 3443345547460796817, guid: 5c39a7901f7b5d04ebcfb6161c960341,
+      type: 3}
+  - col1: 2
+    col2: 1
+    col3: 1
+    col4: 1
+    col5: 2
+    spriteRenderer: {fileID: 6843291712074636296, guid: b2052b3d02135a847b00597461b08271,
+      type: 3}
+  - col1: 1
+    col2: 2
+    col3: 2
+    col4: 2
+    col5: 1
+    spriteRenderer: {fileID: 777121196476639578, guid: 1e3d2b88d3e033d4c911ff226509ad6a,
+      type: 3}
+  - col1: 0
+    col2: 2
+    col3: 2
+    col4: 2
+    col5: 0
+    spriteRenderer: {fileID: 1459236077285187844, guid: 04260af3c08076c41acd6c5a64724fc7,
+      type: 3}
+  - col1: 2
+    col2: 0
+    col3: 0
+    col4: 0
+    col5: 2
+    spriteRenderer: {fileID: 7690732268953383556, guid: 7905fd14ae4d6744b8378755772165c3,
+      type: 3}
+  - col1: 0
+    col2: 2
+    col3: 0
+    col4: 2
+    col5: 0
+    spriteRenderer: {fileID: 6157200528032547801, guid: 53a3adf485f3d4640822a6e6d8093b70,
+      type: 3}
+  - col1: 2
+    col2: 0
+    col3: 2
+    col4: 0
+    col5: 2
+    spriteRenderer: {fileID: 1007527476040673581, guid: 63811924e8ca4534498de10355a6ff66,
+      type: 3}
+  - col1: 2
+    col2: 2
+    col3: 1
+    col4: 2
+    col5: 2
+    spriteRenderer: {fileID: 4070741401225079389, guid: ee1345081a1d7e049837176a98eb0f24,
+      type: 3}
+  - col1: 1
+    col2: 1
+    col3: 2
+    col4: 1
+    col5: 1
+    spriteRenderer: {fileID: 5911754487373033013, guid: ad360b0ffd74c27449976daeaf7efd8c,
+      type: 3}
+  - col1: 1
+    col2: 1
+    col3: 0
+    col4: 1
+    col5: 1
+    spriteRenderer: {fileID: 6738284344088615778, guid: 54a6992291091ff4cb54a92e5aa0a061,
+      type: 3}

@@ -51,7 +51,7 @@ public class Reel : MonoBehaviour
     
     private IEnumerator Spin(int targetResult)
     {
-        //Debug.Log(symbols[targetResult].name);
+        Debug.Log(symbols[targetResult].name);
         for (var i = 0; i < _rinseRepeat; i++)
         {
             var targetDistance = targetResult - (((int) (transform.position.y / GRID_SIZE)) + 1);
@@ -120,6 +120,7 @@ public class Reel : MonoBehaviour
             reelNumber-1,
             reelResults
         );
+        StopAllCoroutines();
     }
 
     private void Tick(float tickDistance, Action reduceSpeed = null)
