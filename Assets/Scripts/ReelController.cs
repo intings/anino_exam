@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class ReelController : MonoBehaviour
 {
     [SerializeField] private Reel[] reels;
-    [SerializeField] private PayLine[] payLines;
     [SerializeField] private Button spinButton;
     [SerializeField] private TextMeshProUGUI spinButtonText;
     [SerializeField] private TextMeshProUGUI coinsText;
@@ -22,11 +21,6 @@ public class ReelController : MonoBehaviour
     private bool _canStop = false;
     private int[,] _results;
     private List<Win> _wins;
-
-    private void Awake()
-    {
-        //    PayLinesData.Instance.payLines = payLines;
-    }
 
     private void Spin()
     {
@@ -48,8 +42,7 @@ public class ReelController : MonoBehaviour
             var targetResult = SetTargetBeforeSpinning(reelLength);
             targetResults.Add(targetResult);
             reel.stopReel = StopReel;
-            reel.StartSpin(targetResult, i + 3);
-            //reel.StartSpin(30 + (i * 30));
+            reel.StartSpin(targetResult, i + 4);
             i++;
         }
         _canStop = true;
@@ -127,10 +120,13 @@ public class ReelController : MonoBehaviour
         }
         if (lastDisplayedLine != null)
             Destroy(lastDisplayedLine);
-        SoundController.Instance.PlaySoundByIndex(4);
-        _coins += winAmount;
-        winningsText.text = "WINNINGS : " + winAmount;
-        coinsText.text = "COINS : " + _coins;
+        if (winAmount > 0)
+        {
+            SoundController.Instance.PlaySoundByIndex(4);
+            _coins += winAmount;
+            winningsText.text = "WINNINGS : " + winAmount;
+            coinsText.text = "COINS : " + _coins;
+        }
         CheckIfBetAllowed();
         _canSpin = true;
         spinButton.enabled = true;
