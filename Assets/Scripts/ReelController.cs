@@ -14,7 +14,7 @@ public class ReelController : MonoBehaviour
 
     // private void Awake()
     // {
-    //     PayLinesData.Instance.payLines = payLines;
+    //     PayLinesData.    .payLines = payLines;
     // }
 
     public void Spin()
@@ -66,18 +66,20 @@ public class ReelController : MonoBehaviour
             {
                 Debug.Log("Value: " + item.Value + " Count: " + item.Count);
                 
-                _wins.Add(new Win(payLine, item.Value));
+                _wins.Add(new Win(payLine, item.Value, item.Count));
             }
-
-            _canSpin = true;
         }
+        HighLightSymbols();
+        _canSpin = true;
     }
 
     private void HighLightSymbols()
     {
+        var symbolsData = SymbolsDataHolder.Instance.symbolsData;
         foreach (var win in _wins)
         {
-            
+            var a = symbolsData[win.Value -1].PayOut[win.Count -1];
+            Debug.Log(a);
         }
     }
 }
