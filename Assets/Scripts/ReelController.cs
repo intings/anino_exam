@@ -29,6 +29,7 @@ public class ReelController : MonoBehaviour
         _canSpin = false;
         _coins -= _betAmount;
         coinsText.text = "COINS : " + _coins;
+        winningsText.text = "WINNINGS : ";
         _results = new int[3, 5];
         spinButton.onClick.RemoveListener(Spin);
         spinButton.onClick.AddListener(Stop);
