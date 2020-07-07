@@ -1,13 +1,26 @@
 # anino_exam
 Unity 2019.2.14f1
 
-System setup (main classes, controllers, objects)
+ReelController:
+Unfortunately handles everything from:
+1. Button events
+2. initiating the spinning of each reel
+3. checking for winning combinations
+4. Contains the 5 Reel Objects
 
-Payout Lines:
-Can be found in Reel Controller > Pay Lines serialized field
+Reel Object:
+1. Contains symbols
+2. Handles "rotation" of itself
 
-Additional notes:
+SymbolsDataHolder:
+1. A singleton that holds symbols from a scriptable object
 
-Discuss Scalability of system
-Discuss Flexibility of the system
-What are the possible future improvements of your project
+Resources Folder:
+Contains Data for Payout Lines and Symbols
+PayLinesData can be edited
+SymbolsData is still tightly coupled. I only recommend editing the PayOut field
+
+This can handle increasing the symbols but is still fragile.
+Payout lines, flexible enough to add or remove lines.
+
+A lot of improvements with UI and separation of concerns.
