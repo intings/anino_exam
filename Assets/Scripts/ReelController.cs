@@ -82,24 +82,11 @@ public class ReelController : MonoBehaviour
     {
         foreach (var payLine in PayLinesData.Instance.payLines)
         {
-            int[] line ={
-                _results[payLine.col1, 0],
-                _results[payLine.col2, 1],
-                _results[payLine.col3, 2],
-                _results[payLine.col4, 3],
-                _results[payLine.col5, 4]
-            };
-            var query = from element in line
-                group element by element
-                into g
-                let count = g.Count()
-                where count > 2
-                select new {Value = g.Key, Count = count};
-            foreach (var item in query)
-            {
-                _wins.Add(new Win(payLine, item.Value, item.Count));
-            }
+            if (payLine.CheckResult(_results, out var win))
+                _wins.Add(win);
+            
         }
+
         StartCoroutine(DisplayWinnings());
     }
 
