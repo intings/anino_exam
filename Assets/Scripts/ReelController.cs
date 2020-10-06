@@ -94,20 +94,12 @@ public class ReelController : MonoBehaviour
     {
         var symbolsData = SymbolsDataHolder.Instance.symbolsData;
         var winAmount = 0;
-        GameObject lastDisplayedLine = null;
         foreach (var win in _wins)
         {
-            if (lastDisplayedLine != null)
-                Destroy(lastDisplayedLine);
-            lastDisplayedLine = Instantiate(win.PayLine.spriteRenderer.gameObject);
-            SoundController.Instance.PlaySoundByIndex(7);
-            var linePayout = symbolsData[win.Value - 1].PayOut[win.Count - 1];
-            linePayout *= (_betAmount / 10);
-            winAmount += linePayout;
-            yield return new WaitForSeconds(1);
+            yield return win.Show(symbolsData, _betAmount);
+            winAmount += win.Amount;
         }
-        if (lastDisplayedLine != null)
-            Destroy(lastDisplayedLine);
+        
         if (winAmount > 0)
         {
             SoundController.Instance.PlaySoundByIndex(4);
